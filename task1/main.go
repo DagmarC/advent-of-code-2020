@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
+	"github.com/DagmarC/codeOfAdvent/datafile"
 	"github.com/DagmarC/codeOfAdvent/task1/binarytree"
-	"github.com/DagmarC/codeOfAdvent/task1/datafile"
 	"github.com/DagmarC/codeOfAdvent/task1/solution"
 )
 

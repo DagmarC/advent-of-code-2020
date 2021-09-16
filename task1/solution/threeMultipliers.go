@@ -3,7 +3,7 @@ package solution
 import (
 	"errors"
 	"fmt"
-	"github.com/DagmarC/codeOfAdvent/task1/datafile"
+	"github.com/DagmarC/codeOfAdvent/datafile"
 )
 
 func Fin3dMultipliers(sum int) (int, error) {

@@ -2,8 +2,8 @@ package datafile
 
 import (
 	"bufio"
+	"github.com/DagmarC/codeOfAdvent/constants"
 	"github.com/DagmarC/codeOfAdvent/task1/binarytree"
-	"github.com/DagmarC/codeOfAdvent/task1/constants"
 	"log"
 	"os"
 	"strconv"
@@ -30,7 +30,7 @@ func loadFile(option loadOption) {
 
 	node := &binarytree.Node{Value: 0}
 
-	file, err := os.Open(constants.FileInput)
+	file, err := os.Open(constants.Task1)
 	if err != nil {
 		log.Fatal(err)
 	}
