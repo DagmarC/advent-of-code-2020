@@ -16,7 +16,15 @@ func main() {
 	}
 	countValidPasswords := 0
 	for _, pd := range passwordDefinitions {
-		if pd.ValidatePassword() {
+		if pd.ValidatePasswordFirst() {
+			countValidPasswords++
+		}
+	}
+	fmt.Println("Number of valid passwords: ", countValidPasswords)
+
+	countValidPasswords = 0
+	for _, pd := range passwordDefinitions {
+		if pd.ValidatePasswordSecond() {
 			countValidPasswords++
 		}
 	}
