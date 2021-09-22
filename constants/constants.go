@@ -7,3 +7,5 @@ const Task2 string = "C:\\Users\\dagmar.mocarnikova\\go\\textfiles\\codeOfAdvent
 const Task3 string = "C:\\Users\\dagmar.mocarnikova\\go\\textfiles\\codeOfAdvent\\forestInput.txt"
 
 const Task4 string = "C:\\Users\\dagmar.mocarnikova\\go\\textfiles\\codeOfAdvent\\batchFile.txt"
+
+const Task5 string = "C:\\Users\\dagmar.mocarnikova\\go\\textfiles\\codeOfAdvent\\seatIds.txt"

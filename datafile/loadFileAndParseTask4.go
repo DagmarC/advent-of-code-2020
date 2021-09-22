@@ -11,7 +11,6 @@ import (
 )
 
 const (
-	newline   = "\n"
 	space     = " "
 	semicolon = ":"
 )
