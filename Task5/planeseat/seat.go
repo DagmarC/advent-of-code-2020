@@ -38,8 +38,7 @@ func (s *Seat) GetSeatRowValue() int {
 	result := 0.0
 
 	for i := len(s.row) - 1; i >= 0; i-- {
-		switch string(s.row[i]) {
-		case "B":
+		if string(s.row[i]) == "B" {
 			result += math.Pow(2, power)
 		}
 		power++
@@ -54,8 +53,7 @@ func (s *Seat) GetSeatColumnValue() int {
 	result := 0.0
 
 	for i := len(s.column) - 1; i >= 0; i-- {
-		switch string(s.column[i]) {
-		case "R":
+		if string(s.column[i]) == "R" {
 			result += math.Pow(2, power)
 		}
 		power++
