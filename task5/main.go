@@ -20,8 +20,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/DagmarC/codeOfAdvent/Task5/planeseat"
 	"github.com/DagmarC/codeOfAdvent/datafile"
+	"github.com/DagmarC/codeOfAdvent/task5/planeseat"
 	"math"
 	"sort"
 )

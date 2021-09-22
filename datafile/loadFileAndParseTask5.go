@@ -3,8 +3,8 @@ package datafile
 import (
 	"bufio"
 	"errors"
-	"github.com/DagmarC/codeOfAdvent/Task5/planeseat"
 	"github.com/DagmarC/codeOfAdvent/constants"
+	"github.com/DagmarC/codeOfAdvent/task5/planeseat"
 	"log"
 	"os"
 )
