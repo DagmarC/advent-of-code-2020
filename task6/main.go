@@ -52,11 +52,12 @@ func findAnswersIntersection(answers *[]string) int {
 	if len(*answers) == 0 {
 		return 0
 	}
-	firstPersonAnswers := (*answers)[0]
 	// Everyone (all 1 person) answered "yes"
 	if len(*answers) == 1 {
 		return len((*answers)[0])
 	}
+
+	firstPersonAnswers := (*answers)[0]
 	sum := 0
 	// You have to check all people`s answers for each letter to count it as correct answer.
 	// Example: answer: letter a
