@@ -24,8 +24,19 @@ func main() {
 	}
 	fmt.Println("__________________SOLUTION TASK 1______________")
 	oppositeBags := graphsearch.CreateOppositeBags(allBags)
+	fmt.Println()
+	shinyGoldBagOpposite, err := luggage.GetByName("shiny gold", &oppositeBags)
+	if err != nil {
+		log.Fatal(err)
+	}
+	count := graphsearch.DepthSearch(shinyGoldBagOpposite)
+	fmt.Println("RESULT TASK 1: ", count)
 
-	shinyGoldBag := luggage.GetByName("shiny gold", &oppositeBags)
-	count := graphsearch.DepthSearch(shinyGoldBag)
-	fmt.Println("RESULT: ", count)
+	shinyGoldBag, err := luggage.GetByName("shiny gold", allBags)
+	if err != nil {
+		log.Fatal(err)
+	}
+	result := graphsearch.DepthSearchWeightedEdges(shinyGoldBag)
+	fmt.Println("RESULT TASK 2: ", result)
+
 }

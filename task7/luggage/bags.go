@@ -1,6 +1,7 @@
 package luggage
 
 import (
+	"errors"
 	"fmt"
 	"sync"
 )
@@ -109,23 +110,21 @@ func GetBySerialNumber(id int, bags *[]*Bag) (result *Bag) {
 	return result
 }
 
-func GetByName(name string, bags *[]*Bag) (result *Bag) {
-	result = nil
+func GetByName(name string, bags *[]*Bag) (*Bag, error) {
 	for _, bag := range *bags {
 		if bag.GetName() == name {
-			result = bag
-			break
+			return bag, nil
 		}
 	}
-	return result
+	return CreateBag(), errors.New("no bag with that name found")
 }
 
 func PrintBags(bags *[]*Bag, additionalBags bool) {
 	for _, bag := range *bags {
-		fmt.Println("Main Bag", bag.GetSerialNumber(), bag.GetName())
+		fmt.Println("Main Bag", bag.GetSerialNumber(), bag.GetName(), bag.GetVisited())
 		if additionalBags {
 			for ab := range *bag.GetAdditionalBags() {
-				fmt.Println("-----Additional bags:", ab.GetSerialNumber(), ab.GetName())
+				fmt.Println("-----Additional bags:", ab.GetSerialNumber(), ab.GetName(), ab.GetVisited())
 			}
 		}
 	}
