@@ -21,7 +21,7 @@ func main() {
 func countValidPasswords(passports *[]*passp.Passport) int {
 	count := 0
 	for _, p := range *passports {
-		_, cidInit := p.GetPassportsData()[passp.Cid.String()]
+		_, cidInit := p.PassportsData()[passp.Cid.String()]
 
 		if p.InitFieldsCount == 8 {
 			if valid := p.ValidatePassport(); valid {

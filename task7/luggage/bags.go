@@ -42,7 +42,7 @@ func (b *Bag) SetSerialNumber(number int) {
 	b.serialNumber = number
 }
 
-func (b *Bag) GetSerialNumber() int {
+func (b *Bag) SerialNumber() int {
 	return b.serialNumber
 }
 
@@ -50,7 +50,7 @@ func (b *Bag) AddAdditionalBag(bag *Bag, amount int) {
 	b.additionalBags[bag] = amount
 }
 
-func (b *Bag) GetAdditionalBags() *map[*Bag]int {
+func (b *Bag) AdditionalBags() *map[*Bag]int {
 	return &b.additionalBags
 }
 
@@ -64,7 +64,7 @@ func (b *Bag) SetName(name string) {
 	b.name = name
 }
 
-func (b *Bag) GetName() string {
+func (b *Bag) Name() string {
 	return b.name
 }
 
@@ -72,7 +72,7 @@ func (b *Bag) SetVisited(visited bool) {
 	b.visited = visited
 }
 
-func (b *Bag) GetVisited() bool {
+func (b *Bag) Visited() bool {
 	return b.visited
 }
 
@@ -82,7 +82,7 @@ func (b *Bag) GetVisited() bool {
 func Exists(name string, bags *[]*Bag) (result *Bag) {
 	result = nil
 	for _, bag := range *bags {
-		if bag.GetName() == name {
+		if bag.Name() == name {
 			result = bag
 			break
 		}
@@ -92,17 +92,17 @@ func Exists(name string, bags *[]*Bag) (result *Bag) {
 
 // AddUniqueBags will add bag that is unique to a given slice of bags.
 func AddUniqueBags(bags *[]*Bag, bag *Bag) bool {
-	if exists := Exists(bag.GetName(), bags); exists == nil {
+	if exists := Exists(bag.Name(), bags); exists == nil {
 		*bags = append(*bags, bag)
 		return true
 	}
 	return false
 }
 
-func GetBySerialNumber(id int, bags *[]*Bag) (result *Bag) {
+func BagBySerialNumber(id int, bags *[]*Bag) (result *Bag) {
 	result = nil
 	for _, bag := range *bags {
-		if bag.GetSerialNumber() == id {
+		if bag.SerialNumber() == id {
 			result = bag
 			break
 		}
@@ -110,9 +110,9 @@ func GetBySerialNumber(id int, bags *[]*Bag) (result *Bag) {
 	return result
 }
 
-func GetByName(name string, bags *[]*Bag) (*Bag, error) {
+func BagByName(name string, bags *[]*Bag) (*Bag, error) {
 	for _, bag := range *bags {
-		if bag.GetName() == name {
+		if bag.Name() == name {
 			return bag, nil
 		}
 	}
@@ -121,10 +121,10 @@ func GetByName(name string, bags *[]*Bag) (*Bag, error) {
 
 func PrintBags(bags *[]*Bag, additionalBags bool) {
 	for _, bag := range *bags {
-		fmt.Println("Main Bag", bag.GetSerialNumber(), bag.GetName(), bag.GetVisited())
+		fmt.Println("Main Bag", bag.SerialNumber(), bag.Name(), bag.Visited())
 		if additionalBags {
-			for ab := range *bag.GetAdditionalBags() {
-				fmt.Println("-----Additional bags:", ab.GetSerialNumber(), ab.GetName(), ab.GetVisited())
+			for ab := range *bag.AdditionalBags() {
+				fmt.Println("-----Additional bags:", ab.SerialNumber(), ab.Name(), ab.Visited())
 			}
 		}
 	}

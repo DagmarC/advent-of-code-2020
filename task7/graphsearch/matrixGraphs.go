@@ -15,7 +15,7 @@ func CreateOppositeBags(allBags *[]*luggage.Bag) []*luggage.Bag {
 	// Create the copy of the bags and slice -> Name is the same but IDs are greater by length of the original slice.
 	for _, bag := range *allBags {
 		newBag := luggage.CreateBag()
-		newBag.SetName(bag.GetName())
+		newBag.SetName(bag.Name())
 		oppositeBags = append(oppositeBags, newBag)
 	}
 
@@ -25,12 +25,12 @@ func CreateOppositeBags(allBags *[]*luggage.Bag) []*luggage.Bag {
 	// Opposite: Additional Bag -> Main Bag
 	for _, bag := range *allBags {
 		// Get tha bag with the same name but from opposite directions.
-		bagOpposite, err := luggage.GetByName(bag.GetName(), &oppositeBags)
+		bagOpposite, err := luggage.BagByName(bag.Name(), &oppositeBags)
 		if err != nil {
 			log.Fatal(err)
 		}
-		for ab := range *bag.GetAdditionalBags() {
-			additionalOppositeBag, err := luggage.GetByName(ab.GetName(), &oppositeBags)
+		for ab := range *bag.AdditionalBags() {
+			additionalOppositeBag, err := luggage.BagByName(ab.Name(), &oppositeBags)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -51,9 +51,9 @@ func depthSearchRec(indexBag *luggage.Bag, count int) int {
 	indexBag.SetVisited(true)
 	//fmt.Println("Recursion", indexBag)
 
-	for vertexBag := range *indexBag.GetAdditionalBags() {
+	for vertexBag := range *indexBag.AdditionalBags() {
 		// If not visited -> continue with searching on this vertex.
-		if !vertexBag.GetVisited() {
+		if !vertexBag.Visited() {
 			count = depthSearchRec(vertexBag, count+1)
 		}
 	}
@@ -67,7 +67,7 @@ func DepthSearchWeightedEdges(initialIndexBag *luggage.Bag) int {
 
 func depthSearchWeightedEdgesRec(indexBag *luggage.Bag) int {
 	edgeSum := 0
-	for vertexBag, edgeValue := range *indexBag.GetAdditionalBags() {
+	for vertexBag, edgeValue := range *indexBag.AdditionalBags() {
 		edgeSum += edgeValue + edgeValue*depthSearchWeightedEdgesRec(vertexBag)
 	}
 	return edgeSum

@@ -51,11 +51,11 @@ func main() {
 func getMissingSeatID(seats []*planeseat.Seat) int {
 	// Sort by age, keeping original order or equal elements.
 	sort.SliceStable(seats, func(i, j int) bool {
-		return seats[i].GetSeatID() < seats[j].GetSeatID()
+		return seats[i].SeatID() < seats[j].SeatID()
 	})
-	currentSeat := seats[0].GetSeatID()
+	currentSeat := seats[0].SeatID()
 	for _, s := range seats {
-		if currentSeat != s.GetSeatID() {
+		if currentSeat != s.SeatID() {
 			return currentSeat
 		}
 		currentSeat++

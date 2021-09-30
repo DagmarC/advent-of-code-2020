@@ -23,17 +23,17 @@ func (s *Seat) SetColumnIDString(id string) {
 // SetSeatID Every seat also has a unique seat ID: multiply the row by 8, then add the column.
 // In this example, the seat has ID 44 * 8 + 5 = 357.
 func (s *Seat) SetSeatID() int {
-	s.seatID = 8*s.GetSeatRowValue() + s.GetSeatColumnValue()
+	s.seatID = 8*s.SeatRowValue() + s.SeatColumnValue()
 	return s.seatID
 }
 
-func (s *Seat) GetSeatID() int {
+func (s *Seat) SeatID() int {
 	return s.seatID
 }
 
-// GetSeatRowValue Will obtain value via converting from binary into decimal representation:
+// SeatRowValue Will obtain value via converting from binary into decimal representation:
 //// FBFBBFF - 7 digit string, where F represents 0 and B represents 1.
-func (s *Seat) GetSeatRowValue() int {
+func (s *Seat) SeatRowValue() int {
 	power := 0.0
 	result := 0.0
 
@@ -46,9 +46,9 @@ func (s *Seat) GetSeatRowValue() int {
 	return int(result)
 }
 
-// GetSeatColumnValue Will obtain value via converting from binary into decimal representation:
+// SeatColumnValue Will obtain value via converting from binary into decimal representation:
 // RLR - 3 digit string, where L represents 0 and R represents 1.
-func (s *Seat) GetSeatColumnValue() int {
+func (s *Seat) SeatColumnValue() int {
 	power := 0.0
 	result := 0.0
 

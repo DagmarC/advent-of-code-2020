@@ -70,7 +70,7 @@ func parsePassport(passport *passp.Passport, line string) error {
 			return errors.New("passport data corrupted")
 		}
 		// Get Field.
-		field := passp.GetField(passFields[0])
+		field := passp.FieldByString(passFields[0])
 		if field == passp.Uknown {
 			return errors.New("passport data corrupted, field unknown")
 		}

@@ -33,7 +33,7 @@ func (pp *Passport) FillPassportData(passportField Field, data string) {
 	pp.InitFieldsCount++
 }
 
-func (pp *Passport) GetPassportsData() map[string]string {
+func (pp *Passport) PassportsData() map[string]string {
 	return pp.data
 }
 
@@ -59,7 +59,7 @@ func (f Field) String() string {
 	return "unknown"
 }
 
-func GetField(field string) Field {
+func FieldByString(field string) Field {
 	switch field {
 	case "byr":
 		return Byr
@@ -95,7 +95,7 @@ func GetField(field string) Field {
 
 func (pp *Passport) ValidatePassport() bool {
 	for key, data := range pp.data {
-		isValid := pp.validateData(data, GetField(key))
+		isValid := pp.validateData(data, FieldByString(key))
 		// All data must be valid at the same time.
 		if !isValid {
 			return false
