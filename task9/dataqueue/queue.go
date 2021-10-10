@@ -10,6 +10,10 @@ type Queue struct {
 	elements []int
 }
 
+func (q *Queue) Elements() []int {
+	return q.elements
+}
+
 func (q *Queue) Enqueue(el int) {
 	q.elements = append(q.elements, el)
 }

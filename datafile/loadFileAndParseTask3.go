@@ -35,7 +35,7 @@ func LoadAndParseTask3() [][]string {
 		return nil
 	}
 
-	// Initialize slice of slices and stores the file into the slice of slices.
+	// InitializeDistribution slice of slices and stores the file into the slice of slices.
 	forestMap := make([][]string, lineNumber)
 	scanner = bufio.NewScanner(file)
 	lineNumber = 0
