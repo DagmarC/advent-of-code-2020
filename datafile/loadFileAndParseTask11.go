@@ -43,7 +43,6 @@ func LoadFileTask11() (waitingarea.SeatLayout, error) {
 		if err != nil {
 			return nil, err
 		}
-
 		row++
 	}
 	if scanner.Err() != nil {
