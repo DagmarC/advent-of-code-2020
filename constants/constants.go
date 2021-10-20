@@ -21,3 +21,5 @@ const Task9 string = "C:\\Users\\dagmar.mocarnikova\\go\\textfiles\\codeOfAdvent
 const Task10 string = "C:\\Users\\dagmar.mocarnikova\\go\\textfiles\\codeOfAdvent\\adapterInput.txt"
 
 const Task11 string = "C:\\Users\\dagmar.mocarnikova\\go\\textfiles\\codeOfAdvent\\seatInput.txt"
+
+const Task12 string = "C:\\Users\\dagmar.mocarnikova\\go\\textfiles\\codeOfAdvent\\navigationInput.txt"
