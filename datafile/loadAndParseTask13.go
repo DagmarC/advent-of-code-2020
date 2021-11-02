@@ -2,16 +2,15 @@ package datafile
 
 import (
 	"bufio"
-	"fmt"
 	"github.com/DagmarC/codeOfAdvent/constants"
 	"github.com/DagmarC/codeOfAdvent/task13/busStation"
 	"log"
 	"os"
-	"regexp"
 	"strconv"
+	"strings"
 )
 
-func LoadFileTask13() ([]busStation.Bus, busStation.DepartureTime, error) {
+func LoadFileTask13() ([]busStation.NearestBusDeparture, busStation.DepartureTime, error) {
 
 	file, err := os.Open(constants.Task13)
 	if err != nil {
@@ -25,7 +24,7 @@ func LoadFileTask13() ([]busStation.Bus, busStation.DepartureTime, error) {
 		}
 	}(file)
 
-	allBusses := make([]busStation.Bus, 0)
+	allBusses := make([]busStation.NearestBusDeparture, 0)
 	var leavingTime busStation.DepartureTime
 
 	scanner := bufio.NewScanner(file)
@@ -55,23 +54,20 @@ func LoadFileTask13() ([]busStation.Bus, busStation.DepartureTime, error) {
 	if scanner.Err() != nil {
 		return nil, -1, err
 	}
-	fmt.Println(allBusses, leavingTime)
 	return allBusses, leavingTime, nil
 }
 
-func parseLineAndAppendBusses(line string, allBusses *[]busStation.Bus) error {
-	// line 19,x,x,21,...
-	reg := regexp.MustCompile("([0-9]+)[,x]*")
-	// Find numbers: matches [[19,x,x,x,x,x,x,x,x, 19], [..., N], ...}
-	matches := reg.FindAllStringSubmatch(line, -1)
-	for _, match := range matches {
-		if len(match) == 2 {
-			busId, err := strconv.Atoi(match[1])
-			if err != nil {
-				return err
-			}
-			*allBusses = append(*allBusses, busStation.Bus(busId))
+func parseLineAndAppendBusses(line string, allBusses *[]busStation.NearestBusDeparture) error {
+	busses := strings.Split(line, ",")
+	for offset, bus := range busses {
+		busId, err := strconv.Atoi(bus)
+		if err != nil {
+			continue //x
 		}
+		*allBusses = append(*allBusses, busStation.NearestBusDeparture{
+			BusId:  busStation.BusId(busId),
+			Offset: offset,
+		})
 	}
 	return nil
 }
