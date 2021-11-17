@@ -25,3 +25,5 @@ const Task11 string = "C:\\Users\\dagmar.mocarnikova\\go\\textfiles\\codeOfAdven
 const Task12 string = "C:\\Users\\dagmar.mocarnikova\\go\\textfiles\\codeOfAdvent\\navigationInput.txt"
 
 const Task13 string = "C:\\Users\\dagmar.mocarnikova\\go\\textfiles\\codeOfAdvent\\busInput.txt"
+
+const Task14 string = "C:\\Users\\dagmar.mocarnikova\\go\\textfiles\\codeOfAdvent\\initProgram.txt"

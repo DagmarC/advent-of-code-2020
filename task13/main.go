@@ -3,11 +3,12 @@ package main
 
 import (
 	"fmt"
+	"log"
+
 	"github.com/DagmarC/codeOfAdvent/datafile"
 	"github.com/DagmarC/codeOfAdvent/task13/busStation"
 	"github.com/DagmarC/codeOfAdvent/task13/chineseReminderTheory"
 	"github.com/DagmarC/codeOfAdvent/task13/task2"
-	"log"
 )
 
 func main() {

@@ -2,6 +2,7 @@ package task2
 
 import (
 	"fmt"
+
 	"github.com/DagmarC/codeOfAdvent/task13/busStation"
 )
 
