@@ -9,6 +9,7 @@ import (
 )
 
 // https://adventofcode.com/2020/day/14
+// https://github.com/colinodell/advent-2020/blob/3b889146ced9248713826915d0efff2b86a37135/day14/day14.go#L98 Good solution
 func main() {
 	//test()
 	instructions, err := datafile.LoadFileAndRunTask14(1)
