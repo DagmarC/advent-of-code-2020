@@ -39,18 +39,16 @@ func createElfGame(input []int) *ElfGame {
 	}
 }
 
-func (e *ElfGame) Start(stopGame int64) int {
+func (e *ElfGame) Start(stopGame int) int {
 	currentNumber := 0
 
-	var pos = int64(1)
-	for _, n := range e.input {
-		addLastSaidNumber(e, n, pos)
-		pos++
-	}
-	for pos <= stopGame {
-		currentNumber = getNextNumber(e)
-		addLastSaidNumber(e, currentNumber, pos) // Save Current number as the last said number.
-		pos++
+	for pos := 0; pos < stopGame; pos++ {
+		if pos < len(e.input) {
+			currentNumber = e.input[pos]
+		} else {
+			currentNumber = getNextNumber(e)
+		}
+		addLastSaidNumber(e, currentNumber, pos+1) // Save Current number as the last said number.
 	}
 	return currentNumber
 }
@@ -67,12 +65,11 @@ func getNextNumber(e *ElfGame) int {
 	return queue.Get(0) - firstNumber
 }
 
-func addLastSaidNumber(e *ElfGame, number int, position int64) {
+func addLastSaidNumber(e *ElfGame, number int, position int) {
 	e.lastNumber = number
 
 	if _, ok := e.saidNumbers[number]; !ok {
 		e.saidNumbers[number] = &dataqueue.Queue{} // Initialize queue, if the number is not present in map.
 	}
-	e.saidNumbers[number].Enqueue(int(position))
-
+	e.saidNumbers[number].Enqueue(position)
 }

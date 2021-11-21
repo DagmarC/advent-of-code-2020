@@ -8,21 +8,21 @@ import (
 )
 
 type testData struct {
-	result map[int64]int
+	result map[int]int
 	input  []int
 }
 
 var testInputs = []testData{
 	{
-		map[int64]int{2020: 436, 30000000: 175594},
+		map[int]int{2020: 436, 30000000: 175594},
 		[]int{0, 3, 6},
 	},
 	{
-		result: map[int64]int{2020: 1, 30000000: 2578},
+		result: map[int]int{2020: 1, 30000000: 2578},
 		input:  []int{1, 3, 2},
 	},
 	{
-		map[int64]int{2020: 1836, 30000000: 362},
+		map[int]int{2020: 1836, 30000000: 362},
 		[]int{3, 1, 2},
 	},
 }
