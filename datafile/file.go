@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"io/ioutil"
 	"os"
-	"strconv"
 	"strings"
 
 	"github.com/DagmarC/codeOfAdvent/utils"
@@ -60,16 +59,10 @@ func ReadLineOfNumbers(input string) []int {
 	for scanner.Scan() {
 		numbersStr := strings.Split(scanner.Text(), ",")
 		for _, number := range numbersStr {
-			numbers = append(numbers, ToInt(number))
+			numbers = append(numbers, utils.ToInt(number))
 		}
 	}
 	utils.Check(scanner.Err())
 
 	return numbers
-}
-
-func ToInt(s string) int {
-	number, err := strconv.Atoi(s)
-	utils.Check(err)
-	return number
 }

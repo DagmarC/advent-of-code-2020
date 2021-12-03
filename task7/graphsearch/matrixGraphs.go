@@ -12,7 +12,7 @@ import (
 func CreateOppositeBags(allBags *[]*luggage.Bag) []*luggage.Bag {
 
 	oppositeBags := make([]*luggage.Bag, 0) // new struct
-	// Create the copy of the bags and slice -> Name is the same but IDs are greater by length of the original slice.
+	// Create the copy of the bags and slice -> name is the same but IDs are greater by length of the original slice.
 	for _, bag := range *allBags {
 		newBag := luggage.CreateBag()
 		newBag.SetName(bag.Name())
