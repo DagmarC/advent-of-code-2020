@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/DagmarC/codeOfAdvent/datafile"
-	"github.com/DagmarC/codeOfAdvent/task11/waitingarea"
 	"log"
+
+	"github.com/DagmarC/advent-of-code-2020/datafile"
+	"github.com/DagmarC/advent-of-code-2020/task11/waitingarea"
 )
 
 func main() {

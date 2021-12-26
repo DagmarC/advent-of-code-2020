@@ -3,10 +3,12 @@ package datafile
 import (
 	"bufio"
 	"fmt"
-	"github.com/DagmarC/codeOfAdvent/constants"
-	"github.com/DagmarC/codeOfAdvent/task11/waitingarea"
+
 	"log"
 	"os"
+
+	"github.com/DagmarC/advent-of-code-2020/constants"
+	"github.com/DagmarC/advent-of-code-2020/task11/waitingarea"
 )
 
 func LoadFileTask11() (waitingarea.SeatLayout, error) {

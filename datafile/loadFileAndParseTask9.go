@@ -3,10 +3,11 @@ package datafile
 import (
 	"bufio"
 	"errors"
-	"github.com/DagmarC/codeOfAdvent/constants"
 	"log"
 	"os"
 	"strconv"
+
+	"github.com/DagmarC/advent-of-code-2020/constants"
 )
 
 func LoadFileTask9() ([]int, error) {

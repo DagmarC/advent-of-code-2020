@@ -12,7 +12,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/DagmarC/codeOfAdvent/datafile"
+
+	"github.com/DagmarC/advent-of-code-2020/datafile"
 )
 
 const treeField string = "#"

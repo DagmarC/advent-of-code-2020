@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/DagmarC/codeOfAdvent/datafile"
 	"log"
 	"sort"
 	"strings"
+
+	"github.com/DagmarC/advent-of-code-2020/datafile"
 )
 
 func main() {

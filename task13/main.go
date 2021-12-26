@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/DagmarC/codeOfAdvent/datafile"
-	"github.com/DagmarC/codeOfAdvent/task13/busStation"
-	"github.com/DagmarC/codeOfAdvent/task13/chineseReminderTheory"
-	"github.com/DagmarC/codeOfAdvent/task13/task2"
+	"github.com/DagmarC/advent-of-code-2020/datafile"
+	"github.com/DagmarC/advent-of-code-2020/task13/busStation"
+	"github.com/DagmarC/advent-of-code-2020/task13/chineseReminderTheory"
+	"github.com/DagmarC/advent-of-code-2020/task13/task2"
 )
 
 func main() {

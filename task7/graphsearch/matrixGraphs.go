@@ -1,8 +1,9 @@
 package graphsearch
 
 import (
-	"github.com/DagmarC/codeOfAdvent/task7/luggage"
 	"log"
+
+	"github.com/DagmarC/advent-of-code-2020/task7/luggage"
 )
 
 // CreateOppositeBags If X -> A, B (X bag has additional bags A and B), then the resultant slice will contain

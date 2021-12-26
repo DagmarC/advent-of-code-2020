@@ -20,10 +20,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/DagmarC/codeOfAdvent/datafile"
-	"github.com/DagmarC/codeOfAdvent/task5/planeseat"
 	"math"
 	"sort"
+
+	"github.com/DagmarC/advent-of-code-2020/datafile"
+	"github.com/DagmarC/advent-of-code-2020/task5/planeseat"
 )
 
 // As a sanity check, look through your list of boarding passes. What is the highest seat ID on a boarding pass?

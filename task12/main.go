@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/DagmarC/codeOfAdvent/datafile"
-	"github.com/DagmarC/codeOfAdvent/task12/ship"
 	"log"
+
+	"github.com/DagmarC/advent-of-code-2020/datafile"
+	"github.com/DagmarC/advent-of-code-2020/task12/ship"
 )
 
 // At the end of these instructions, the ship's Manhattan distance (sum of the absolute values of its
@@ -19,6 +20,7 @@ func main() {
 	fmt.Println(instructions)
 
 	manhattanDistance, err := ship.CalculateManhattanDistance(instructions, false)
+
 	if err != nil {
 		log.Fatal(err)
 	}

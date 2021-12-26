@@ -3,7 +3,7 @@ package translation
 import (
 	"testing"
 
-	"github.com/DagmarC/codeOfAdvent/utils"
+	"github.com/DagmarC/advent-of-code-2020/utils"
 )
 
 var testTicketRules1 = TicketRules{

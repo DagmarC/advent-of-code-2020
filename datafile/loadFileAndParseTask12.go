@@ -3,12 +3,14 @@ package datafile
 import (
 	"bufio"
 	"fmt"
-	"github.com/DagmarC/codeOfAdvent/constants"
-	"github.com/DagmarC/codeOfAdvent/task12/ship"
+
 	"log"
 	"os"
 	"regexp"
 	"strconv"
+
+	"github.com/DagmarC/advent-of-code-2020/constants"
+	"github.com/DagmarC/advent-of-code-2020/task12/ship"
 )
 
 func LoadFileTask12() ([]ship.Instruction, error) {

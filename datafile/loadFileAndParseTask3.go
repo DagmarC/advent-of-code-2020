@@ -2,10 +2,11 @@ package datafile
 
 import (
 	"bufio"
-	"github.com/DagmarC/codeOfAdvent/constants"
 	"io"
 	"log"
 	"os"
+
+	"github.com/DagmarC/advent-of-code-2020/constants"
 )
 
 func LoadAndParseTask3() [][]string {

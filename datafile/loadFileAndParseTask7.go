@@ -2,13 +2,15 @@ package datafile
 
 import (
 	"bufio"
-	"github.com/DagmarC/codeOfAdvent/constants"
-	"github.com/DagmarC/codeOfAdvent/task7/luggage"
+
 	"log"
 	"os"
 	"regexp"
 	"strconv"
 	"strings"
+
+	"github.com/DagmarC/advent-of-code-2020/constants"
+	"github.com/DagmarC/advent-of-code-2020/task7/luggage"
 )
 
 func LoadFileTask7() (*[]*luggage.Bag, error) {

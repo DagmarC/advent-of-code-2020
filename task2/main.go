@@ -5,8 +5,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/DagmarC/codeOfAdvent/datafile"
 	"log"
+
+	"github.com/DagmarC/advent-of-code-2020/datafile"
 )
 
 func main() {

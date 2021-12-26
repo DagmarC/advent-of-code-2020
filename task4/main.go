@@ -4,8 +4,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/DagmarC/codeOfAdvent/datafile"
-	"github.com/DagmarC/codeOfAdvent/task4/passp"
+
+	"github.com/DagmarC/advent-of-code-2020/datafile"
+	"github.com/DagmarC/advent-of-code-2020/task4/passp"
 )
 
 func main() {

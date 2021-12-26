@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/DagmarC/codeOfAdvent/datafile"
-	"github.com/DagmarC/codeOfAdvent/task14/initprogram"
+	"github.com/DagmarC/advent-of-code-2020/datafile"
+	"github.com/DagmarC/advent-of-code-2020/task14/initprogram"
 )
 
 // https://adventofcode.com/2020/day/14

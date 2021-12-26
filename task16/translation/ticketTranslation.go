@@ -6,7 +6,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/DagmarC/codeOfAdvent/utils"
+	"github.com/DagmarC/advent-of-code-2020/utils"
 )
 
 type Ticket struct {

@@ -3,8 +3,8 @@ package datafile
 import (
 	"strings"
 
-	"github.com/DagmarC/codeOfAdvent/constants"
-	"github.com/DagmarC/codeOfAdvent/task16/translation"
+	"github.com/DagmarC/advent-of-code-2020/constants"
+	"github.com/DagmarC/advent-of-code-2020/task16/translation"
 )
 
 const rulesStr string = "rules:"

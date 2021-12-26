@@ -3,10 +3,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/DagmarC/codeOfAdvent/constants"
-	"github.com/DagmarC/codeOfAdvent/datafile"
-	"github.com/DagmarC/codeOfAdvent/task9/dataqueue"
-	"github.com/DagmarC/codeOfAdvent/utils"
+	"github.com/DagmarC/advent-of-code-2020/constants"
+	"github.com/DagmarC/advent-of-code-2020/datafile"
+	"github.com/DagmarC/advent-of-code-2020/task9/dataqueue"
+	"github.com/DagmarC/advent-of-code-2020/utils"
 )
 
 func main() {

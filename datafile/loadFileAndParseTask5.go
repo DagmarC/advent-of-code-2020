@@ -3,10 +3,11 @@ package datafile
 import (
 	"bufio"
 	"errors"
-	"github.com/DagmarC/codeOfAdvent/constants"
-	"github.com/DagmarC/codeOfAdvent/task5/planeseat"
 	"log"
 	"os"
+
+	"github.com/DagmarC/advent-of-code-2020/constants"
+	"github.com/DagmarC/advent-of-code-2020/task5/planeseat"
 )
 
 // LoadFileTask5 loads, parses creates and returns *[]planeseat.Seat

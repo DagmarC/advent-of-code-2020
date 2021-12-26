@@ -15,9 +15,10 @@ package main
 import (
 	"errors"
 	"fmt"
-	"github.com/DagmarC/codeOfAdvent/datafile"
-	"github.com/DagmarC/codeOfAdvent/task8/gameBoot"
 	"log"
+
+	"github.com/DagmarC/advent-of-code-2020/datafile"
+	"github.com/DagmarC/advent-of-code-2020/task8/gameBoot"
 )
 
 func main() {

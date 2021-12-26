@@ -3,11 +3,12 @@ package datafile
 import (
 	"bufio"
 	"errors"
-	"github.com/DagmarC/codeOfAdvent/constants"
-	"github.com/DagmarC/codeOfAdvent/task4/passp"
 	"log"
 	"os"
 	"strings"
+
+	"github.com/DagmarC/advent-of-code-2020/constants"
+	"github.com/DagmarC/advent-of-code-2020/task4/passp"
 )
 
 const (
@@ -16,6 +17,7 @@ const (
 )
 
 func LoadAndParseTask4() []*passp.Passport {
+
 	var passports []*passp.Passport
 
 	file, err := os.Open(constants.Task4)

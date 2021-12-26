@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/DagmarC/codeOfAdvent/task9/dataqueue"
+	"github.com/DagmarC/advent-of-code-2020/task9/dataqueue"
 )
 
 type testData struct {

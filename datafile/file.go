@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/DagmarC/codeOfAdvent/utils"
+	"github.com/DagmarC/advent-of-code-2020/utils"
 )
 
 func ReadFile(input string) string {

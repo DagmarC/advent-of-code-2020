@@ -4,12 +4,13 @@ package datafile
 import (
 	"bufio"
 	"errors"
-	"github.com/DagmarC/codeOfAdvent/constants"
-	"github.com/DagmarC/codeOfAdvent/task2/passp"
 	"log"
 	"os"
 	"strconv"
 	"strings"
+
+	"github.com/DagmarC/advent-of-code-2020/constants"
+	"github.com/DagmarC/advent-of-code-2020/task2/passp"
 )
 
 // LoadFileTask2 loads, parses creates and returns []*passp.Definition

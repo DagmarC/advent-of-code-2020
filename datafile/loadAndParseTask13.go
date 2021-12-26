@@ -2,12 +2,13 @@ package datafile
 
 import (
 	"bufio"
-	"github.com/DagmarC/codeOfAdvent/constants"
-	"github.com/DagmarC/codeOfAdvent/task13/busStation"
 	"log"
 	"os"
 	"strconv"
 	"strings"
+
+	"github.com/DagmarC/advent-of-code-2020/constants"
+	"github.com/DagmarC/advent-of-code-2020/task13/busStation"
 )
 
 func LoadFileTask13() ([]busStation.NearestBusDeparture, busStation.DepartureTime, error) {

@@ -8,8 +8,8 @@ import (
 	"regexp"
 	"strconv"
 
-	"github.com/DagmarC/codeOfAdvent/constants"
-	"github.com/DagmarC/codeOfAdvent/task14/initprogram"
+	"github.com/DagmarC/advent-of-code-2020/constants"
+	"github.com/DagmarC/advent-of-code-2020/task14/initprogram"
 )
 
 func LoadFileAndRunTask14(subtask int) (*initprogram.Instructions, error) {

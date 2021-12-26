@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/DagmarC/codeOfAdvent/datafile"
-	"github.com/DagmarC/codeOfAdvent/task16/translation"
+	"github.com/DagmarC/advent-of-code-2020/datafile"
+	"github.com/DagmarC/advent-of-code-2020/task16/translation"
 )
 
 func main() {

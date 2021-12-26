@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/DagmarC/codeOfAdvent/datafile"
-	"github.com/DagmarC/codeOfAdvent/task1/binarytree"
-	"github.com/DagmarC/codeOfAdvent/task1/solution"
+
+	"github.com/DagmarC/advent-of-code-2020/datafile"
+	"github.com/DagmarC/advent-of-code-2020/task1/binarytree"
+	"github.com/DagmarC/advent-of-code-2020/task1/solution"
 )
 
 func main() {

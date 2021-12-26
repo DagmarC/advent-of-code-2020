@@ -3,7 +3,7 @@ package task2
 import (
 	"fmt"
 
-	"github.com/DagmarC/codeOfAdvent/task13/busStation"
+	"github.com/DagmarC/advent-of-code-2020/task13/busStation"
 )
 
 // FindNearestTimestamp the earliest timestamp such that all the listed bus IDs depart at offsets matching

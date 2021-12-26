@@ -2,11 +2,12 @@ package datafile
 
 import (
 	"bufio"
-	"github.com/DagmarC/codeOfAdvent/constants"
-	"github.com/DagmarC/codeOfAdvent/task1/binarytree"
 	"log"
 	"os"
 	"strconv"
+
+	"github.com/DagmarC/advent-of-code-2020/constants"
+	"github.com/DagmarC/advent-of-code-2020/task1/binarytree"
 )
 
 type loadOption struct {

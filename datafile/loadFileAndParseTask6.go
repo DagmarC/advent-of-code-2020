@@ -2,10 +2,11 @@ package datafile
 
 import (
 	"bufio"
-	"github.com/DagmarC/codeOfAdvent/constants"
 	"log"
 	"os"
 	"strings"
+
+	"github.com/DagmarC/advent-of-code-2020/constants"
 )
 
 // LoadFileTask6 parses task6 file. Each line represents answers from 1 person. Empty line separates groups.
