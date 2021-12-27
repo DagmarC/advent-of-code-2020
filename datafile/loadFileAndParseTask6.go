@@ -4,9 +4,11 @@ import (
 	"bufio"
 	"log"
 	"os"
+	"path"
 	"strings"
 
 	"github.com/DagmarC/advent-of-code-2020/constants"
+	"github.com/DagmarC/advent-of-code-2020/utils"
 )
 
 // LoadFileTask6 parses task6 file. Each line represents answers from 1 person. Empty line separates groups.
@@ -20,7 +22,7 @@ import (
 //bfxz
 func LoadFileTask6() (*map[int]string, *map[int][]string, error) {
 
-	file, err := os.Open(constants.Task6)
+	file, err := os.Open(path.Join(utils.GetWd(), constants.Input))
 	if err != nil {
 		return nil, nil, err
 	}

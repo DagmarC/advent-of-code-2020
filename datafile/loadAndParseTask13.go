@@ -4,16 +4,18 @@ import (
 	"bufio"
 	"log"
 	"os"
+	"path"
 	"strconv"
 	"strings"
 
 	"github.com/DagmarC/advent-of-code-2020/constants"
 	"github.com/DagmarC/advent-of-code-2020/task13/busStation"
+	"github.com/DagmarC/advent-of-code-2020/utils"
 )
 
 func LoadFileTask13() ([]busStation.NearestBusDeparture, busStation.DepartureTime, error) {
 
-	file, err := os.Open(constants.Task13)
+	file, err := os.Open(path.Join(utils.GetWd(), constants.Input))
 	if err != nil {
 		return nil, -1, err
 	}

@@ -1,10 +1,12 @@
 package datafile
 
 import (
+	"path"
 	"strings"
 
 	"github.com/DagmarC/advent-of-code-2020/constants"
 	"github.com/DagmarC/advent-of-code-2020/task16/translation"
+	"github.com/DagmarC/advent-of-code-2020/utils"
 )
 
 const rulesStr string = "rules:"
@@ -18,7 +20,7 @@ func LoadDay16() (*translation.TicketRules, *translation.Ticket, *[]translation.
 	var yourTicket *translation.Ticket
 	var departureKeys = make([]string, 0)
 
-	lines := ReadLines(constants.Task16)
+	lines := ReadLines(path.Join(utils.GetWd(), constants.Input))
 
 	loader := rulesStr // The default one.
 	for _, line := range lines {

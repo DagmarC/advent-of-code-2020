@@ -6,17 +6,19 @@ import (
 	"errors"
 	"log"
 	"os"
+	"path"
 	"strconv"
 	"strings"
 
 	"github.com/DagmarC/advent-of-code-2020/constants"
 	"github.com/DagmarC/advent-of-code-2020/task2/passp"
+	"github.com/DagmarC/advent-of-code-2020/utils"
 )
 
 // LoadFileTask2 loads, parses creates and returns []*passp.Definition
 func LoadFileTask2() ([]*passp.Definition, error) {
 
-	file, err := os.Open(constants.Task2)
+	file, err := os.Open(path.Join(utils.GetWd(), constants.Input))
 	if err != nil {
 		return nil, err
 	}

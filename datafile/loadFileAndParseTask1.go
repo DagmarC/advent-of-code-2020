@@ -4,10 +4,12 @@ import (
 	"bufio"
 	"log"
 	"os"
+	"path"
 	"strconv"
 
 	"github.com/DagmarC/advent-of-code-2020/constants"
 	"github.com/DagmarC/advent-of-code-2020/task1/binarytree"
+	"github.com/DagmarC/advent-of-code-2020/utils"
 )
 
 type loadOption struct {
@@ -30,8 +32,7 @@ func LoadFileIntoSlice(data *[]int) {
 func loadFile(option loadOption) {
 
 	node := &binarytree.Node{Value: 0}
-
-	file, err := os.Open(constants.Task1)
+	file, err := os.Open(path.Join(utils.GetWd(), constants.Input))
 	if err != nil {
 		log.Fatal(err)
 	}

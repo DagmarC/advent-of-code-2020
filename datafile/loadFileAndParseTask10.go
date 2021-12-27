@@ -3,6 +3,7 @@ package datafile
 import (
 	"bufio"
 	"errors"
+	"path"
 
 	"log"
 	"os"
@@ -10,11 +11,12 @@ import (
 
 	"github.com/DagmarC/advent-of-code-2020/constants"
 	"github.com/DagmarC/advent-of-code-2020/task10/adapterpkg"
+	"github.com/DagmarC/advent-of-code-2020/utils"
 )
 
 func LoadFileTask10() ([]adapterpkg.Adapter, error) {
 
-	file, err := os.Open(constants.Task10)
+	file, err := os.Open(path.Join(utils.GetWd(), constants.Input))
 	if err != nil {
 		return nil, err
 	}

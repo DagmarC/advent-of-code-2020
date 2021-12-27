@@ -5,10 +5,12 @@ import (
 	"errors"
 	"log"
 	"os"
+	"path"
 	"strings"
 
 	"github.com/DagmarC/advent-of-code-2020/constants"
 	"github.com/DagmarC/advent-of-code-2020/task4/passp"
+	"github.com/DagmarC/advent-of-code-2020/utils"
 )
 
 const (
@@ -20,7 +22,7 @@ func LoadAndParseTask4() []*passp.Passport {
 
 	var passports []*passp.Passport
 
-	file, err := os.Open(constants.Task4)
+	file, err := os.Open(path.Join(utils.GetWd(), constants.Input))
 	if err != nil {
 		log.Fatal(err)
 	}

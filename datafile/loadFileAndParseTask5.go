@@ -5,15 +5,17 @@ import (
 	"errors"
 	"log"
 	"os"
+	"path"
 
 	"github.com/DagmarC/advent-of-code-2020/constants"
 	"github.com/DagmarC/advent-of-code-2020/task5/planeseat"
+	"github.com/DagmarC/advent-of-code-2020/utils"
 )
 
 // LoadFileTask5 loads, parses creates and returns *[]planeseat.Seat
 func LoadFileTask5() (*[]*planeseat.Seat, error) {
 
-	file, err := os.Open(constants.Task5)
+	file, err := os.Open(path.Join(utils.GetWd(), constants.Input))
 	if err != nil {
 		return nil, err
 	}
