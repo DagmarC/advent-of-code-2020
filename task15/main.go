@@ -6,7 +6,6 @@ import (
 
 	"github.com/DagmarC/advent-of-code-2020/constants"
 	"github.com/DagmarC/advent-of-code-2020/datafile"
-	"github.com/DagmarC/advent-of-code-2020/task9/dataqueue"
 	"github.com/DagmarC/advent-of-code-2020/utils"
 )
 
@@ -19,7 +18,7 @@ func main() {
 	fmt.Println("Given your starting numbers, what will be the 2020th number spoken?", endGameNumber)
 
 	// Reset the game queue.
-	game.saidNumbers = make(map[int]*dataqueue.Queue, 0)
+	game.saidNumbers = make(map[int]*utils.Queue, 0)
 
 	fmt.Println("-------TASK 2-------")
 	endGameNumber = game.Start(30000000)
@@ -29,14 +28,14 @@ func main() {
 // ElfGame saidNumbers: key:value a pair of number:position
 type ElfGame struct {
 	input       []int
-	saidNumbers map[int]*dataqueue.Queue
+	saidNumbers map[int]*utils.Queue
 	lastNumber  int
 }
 
 func createElfGame(input []int) *ElfGame {
 	return &ElfGame{
 		input:       input,
-		saidNumbers: make(map[int]*dataqueue.Queue, 0),
+		saidNumbers: make(map[int]*utils.Queue, 0),
 	}
 }
 
@@ -70,7 +69,7 @@ func addLastSaidNumber(e *ElfGame, number int, position int) {
 	e.lastNumber = number
 
 	if _, ok := e.saidNumbers[number]; !ok {
-		e.saidNumbers[number] = &dataqueue.Queue{} // Initialize queue, if the number is not present in map.
+		e.saidNumbers[number] = &utils.Queue{} // Initialize queue, if the number is not present in map.
 	}
 	e.saidNumbers[number].Enqueue(position)
 }

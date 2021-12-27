@@ -1,13 +1,13 @@
 package adapterpkg
 
-import "github.com/DagmarC/advent-of-code-2020/task9/dataqueue"
+import "github.com/DagmarC/advent-of-code-2020/utils"
 
 // createAdapterArrangements will create map where key is the Adapter Rating in Jolt and value is the slice of all
 // possible adapters to which it can be joined (which means max 3 numbers with difference of 1, 2 or 3 from the key).
 // if we have input slice [0, 1, 3, 5] then the map at key 0  would have [1, 3] values -->
 // Result: 0:[1, 3], 1:[3], 3:[5], 5:[]
 func createAdapterArrangements(allAdapters *[]Adapter) (JoltAdaptersMap, error) {
-	
+
 	adaptersGraph := make(JoltAdaptersMap, 0)
 	err := adaptersGraph.InitializeAdaptersMap(allAdapters)
 	if err != nil {
@@ -25,7 +25,7 @@ func createAdapterArrangements(allAdapters *[]Adapter) (JoltAdaptersMap, error) 
 // createAllArrangements will fill the structure adaptersGraph on input allAdapters [0, 1, 3, 5]
 // Result adaptersGraph: 0:[1, 3], 1:[3], 3:[5], 5:[]
 func createAllArrangements(adaptersGraph *JoltAdaptersMap, allAdapters *[]Adapter) error {
-	vertices := dataqueue.Queue{}
+	vertices := utils.Queue{}
 
 	for _, adapter := range *allAdapters {
 

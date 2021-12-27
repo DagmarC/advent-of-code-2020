@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/DagmarC/advent-of-code-2020/task9/dataqueue"
+	"github.com/DagmarC/advent-of-code-2020/utils"
 )
 
 type testData struct {
@@ -33,7 +33,7 @@ func TestStartGame(t *testing.T) {
 
 		for stopGame, expectedResult := range data.result {
 
-			testElfGame.saidNumbers = make(map[int]*dataqueue.Queue, 0) // Reset the game queue.
+			testElfGame.saidNumbers = make(map[int]*utils.Queue, 0) // Reset the game queue.
 
 			result := testElfGame.Start(stopGame)
 			if result != expectedResult {

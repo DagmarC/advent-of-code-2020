@@ -1,4 +1,4 @@
-package dataqueue
+package utils
 
 import (
 	"errors"

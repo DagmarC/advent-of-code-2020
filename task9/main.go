@@ -6,7 +6,7 @@ import (
 	"log"
 
 	"github.com/DagmarC/advent-of-code-2020/datafile"
-	"github.com/DagmarC/advent-of-code-2020/task9/dataqueue"
+	"github.com/DagmarC/advent-of-code-2020/utils"
 )
 
 func main() {
@@ -29,8 +29,9 @@ func main() {
 		resultNumber, sumNumbers.Max()+sumNumbers.Min())
 }
 
-func createPreamble(size int, numbers *[]int) *dataqueue.Queue {
-	preamble := dataqueue.Queue{}
+func createPreamble(size int, numbers *[]int) *utils.Queue {
+
+	preamble := utils.Queue{}
 	for i := 0; i < size; i++ {
 		preamble.Enqueue((*numbers)[i])
 	}
@@ -44,7 +45,7 @@ func createPreamble(size int, numbers *[]int) *dataqueue.Queue {
 //which is not the sum of two of the 25 numbers before it. What is the first number that does not have this property?
 
 // findFirstWrongNumber returns the first number that will not match the sum of the any 2 distinct previous numbers.
-func findFirstWrongNumber(preamble *dataqueue.Queue, numbers *[]int) (int, int, error) {
+func findFirstWrongNumber(preamble *utils.Queue, numbers *[]int) (int, int, error) {
 
 	offset := preamble.Length()
 	fmt.Println(offset)
@@ -67,9 +68,9 @@ func findFirstWrongNumber(preamble *dataqueue.Queue, numbers *[]int) (int, int, 
 // TASK 2
 // findConsecutiveNumbersForSum find a contiguous set of at least two numbers in your list which sum to the
 // invalid number from TASK 1.
-func findConsecutiveNumbersForSum(findSum int, maxIndex int, numbers *[]int) (dataqueue.Queue, error) {
+func findConsecutiveNumbersForSum(findSum int, maxIndex int, numbers *[]int) (utils.Queue, error) {
 	tempSum := 0
-	sumQueue := dataqueue.Queue{}
+	sumQueue := utils.Queue{}
 
 	for i := 0; i < maxIndex; i++ {
 		n := (*numbers)[i]
@@ -79,7 +80,7 @@ func findConsecutiveNumbersForSum(findSum int, maxIndex int, numbers *[]int) (da
 		for tempSum > findSum {
 			toRemove, err := sumQueue.Dequeue()
 			if err != nil {
-				return dataqueue.Queue{}, err
+				return utils.Queue{}, err
 			}
 			tempSum -= toRemove
 		}
@@ -88,10 +89,10 @@ func findConsecutiveNumbersForSum(findSum int, maxIndex int, numbers *[]int) (da
 			return sumQueue, nil
 		}
 	}
-	return dataqueue.Queue{}, errors.New("no consecutive numbers will Sum up to the wanted number")
+	return utils.Queue{}, errors.New("no consecutive numbers will Sum up to the wanted number")
 }
 
-func findSumForNumber(preamble *dataqueue.Queue, number int) bool {
+func findSumForNumber(preamble *utils.Queue, number int) bool {
 	for i := 0; i < preamble.Length(); i++ {
 		for j := 0; j < preamble.Length(); j++ {
 			if i == j {
