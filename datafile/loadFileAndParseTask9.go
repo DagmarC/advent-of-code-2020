@@ -5,16 +5,14 @@ import (
 	"errors"
 	"log"
 	"os"
-	"path"
 	"strconv"
 
-	"github.com/DagmarC/advent-of-code-2020/constants"
 	"github.com/DagmarC/advent-of-code-2020/utils"
 )
 
 func LoadFileTask9() ([]int, error) {
 
-	file, err := os.Open(path.Join(utils.GetWd(), constants.Input))
+	file, err := os.Open(utils.GetInputPath())
 	if err != nil {
 		return nil, err
 	}

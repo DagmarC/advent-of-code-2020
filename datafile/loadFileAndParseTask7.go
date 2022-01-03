@@ -2,7 +2,6 @@ package datafile
 
 import (
 	"bufio"
-	"path"
 
 	"log"
 	"os"
@@ -10,14 +9,13 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/DagmarC/advent-of-code-2020/constants"
 	"github.com/DagmarC/advent-of-code-2020/task7/luggage"
 	"github.com/DagmarC/advent-of-code-2020/utils"
 )
 
 func LoadFileTask7() (*[]*luggage.Bag, error) {
 
-	file, err := os.Open(path.Join(utils.GetWd(), constants.Input))
+	file, err := os.Open(utils.GetInputPath())
 	if err != nil {
 		return nil, err
 	}

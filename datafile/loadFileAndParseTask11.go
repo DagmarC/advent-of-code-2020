@@ -3,19 +3,17 @@ package datafile
 import (
 	"bufio"
 	"fmt"
-	"path"
 
 	"log"
 	"os"
 
-	"github.com/DagmarC/advent-of-code-2020/constants"
 	"github.com/DagmarC/advent-of-code-2020/task11/waitingarea"
 	"github.com/DagmarC/advent-of-code-2020/utils"
 )
 
 func LoadFileTask11() (waitingarea.SeatLayout, error) {
 
-	file, err := os.Open(path.Join(utils.GetWd(), constants.Input))
+	file, err := os.Open(utils.GetInputPath())
 	if err != nil {
 		return nil, err
 	}

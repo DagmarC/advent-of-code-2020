@@ -5,15 +5,13 @@ import (
 	"io"
 	"log"
 	"os"
-	"path"
 
-	"github.com/DagmarC/advent-of-code-2020/constants"
 	"github.com/DagmarC/advent-of-code-2020/utils"
 )
 
 func LoadAndParseTask3() [][]string {
 
-	file, err := os.Open(path.Join(utils.GetWd(), constants.Input))
+	file, err := os.Open(utils.GetInputPath())
 	if err != nil {
 		log.Fatal(err)
 	}

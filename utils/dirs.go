@@ -1,9 +1,16 @@
 package utils
 
-import "os"
+import (
+	"os"
+	"path"
 
-func GetWd() string {
+	"github.com/DagmarC/advent-of-code-2020/constants"
+)
+
+func GetInputPath() string {
 	wd, err := os.Getwd()
 	Check(err)
-	return wd
+
+	return path.Join(wd, constants.Input)
+
 }

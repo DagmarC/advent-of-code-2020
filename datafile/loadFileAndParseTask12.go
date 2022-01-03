@@ -3,21 +3,19 @@ package datafile
 import (
 	"bufio"
 	"fmt"
-	"path"
 
 	"log"
 	"os"
 	"regexp"
 	"strconv"
 
-	"github.com/DagmarC/advent-of-code-2020/constants"
 	"github.com/DagmarC/advent-of-code-2020/task12/ship"
 	"github.com/DagmarC/advent-of-code-2020/utils"
 )
 
 func LoadFileTask12() ([]ship.Instruction, error) {
 
-	file, err := os.Open(path.Join(utils.GetWd(), constants.Input))
+	file, err := os.Open(utils.GetInputPath())
 	if err != nil {
 		return nil, err
 	}

@@ -2,15 +2,13 @@ package main
 
 import (
 	"fmt"
-	"path"
 
-	"github.com/DagmarC/advent-of-code-2020/constants"
 	"github.com/DagmarC/advent-of-code-2020/datafile"
 	"github.com/DagmarC/advent-of-code-2020/utils"
 )
 
 func main() {
-	input := datafile.ReadLineOfNumbers(path.Join(utils.GetWd(), constants.Input))
+	input := datafile.ReadLineOfNumbers(utils.GetInputPath())
 
 	fmt.Println("-------TASK 1-------")
 	game := createElfGame(input)
